@@ -1,22 +1,37 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# .gitignore for this specific tutorial
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# Ignore all
+*
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# Unignore directories, .gitignore, .asm, .c, .md, and Makefiles
+!*/
+!.gitignore
+!*.asm
+!*.c
+!*.h
+!*.md
+!Makefile
 
-# Executables
-*.exe
-*.out
-*.app
+# general .gitignore for other assembly projects
 
+# # Compiled Object files
+# *.slo
+# *.lo
+# *.o
+# *.obj
+
+# # Compiled Dynamic libraries
+# *.so
+# *.dylib
+# *.dll
+
+# # Compiled Static libraries
+# *.lai
+# *.la
+# *.a
+# *.lib
+
+# # Executables
+# *.exe
+# *.out
+# *.app
