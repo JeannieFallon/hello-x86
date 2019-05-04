@@ -1,0 +1,12 @@
+> uno.asm is basic eax, ebx operation w/ syscall exit
+	global is used to define label for entry point
+	value in eax determines system call (1 is exit)
+	value in ebx determines program status
+	0x80 is interrupt handler for system calls
+> run commands:
+	nasm -f elf32 uno.asm -o uno.o
+	ld -m elf_i386 uno.o -o uno
+	./uno
+	echo $?
+> expected output:
+	42

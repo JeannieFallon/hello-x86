@@ -10,6 +10,7 @@
 !*.c
 !*.h
 !*.md
+!*.txt
 !Makefile
 
 # general .gitignore for other assembly projects
