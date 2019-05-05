@@ -7,7 +7,7 @@
 		sub ebx, edx 	; ebx -= edx
 		mul ebx				; eax *= ebx
 		div edx 			; eax /= edx
-			> note: multiplication & division always applied to eax
+				> note: multiplication & division always applied to eax
 > run commands:
 	nasm -f elf32 dos.asm -o dos.o
 	ld -m elf_i386 dos.o -o dos
