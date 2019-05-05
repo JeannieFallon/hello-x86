@@ -1,0 +1,17 @@
+> dos.asm demonstrates data output and basic operations
+	- the output is "Hello, Clarice." because Hannibal Lecter is more entertaining than the standard helloworld
+	- operand examples:
+		mov ebx, 123	; ebx = 123
+		mov eax, ebx	; eax = ebx
+		add ebx, ecx 	; ebx += ecx
+		sub ebx, edx 	; ebx -= edx
+		mul ebx			; eax *= ebx
+		div edx 		; eax /= edx
+			> note: multiplication & division always applied to eax
+> run commands:
+	nasm -f elf32 dos.asm -o dos.o
+	ld -m elf_i386 dos.o -o dos
+	./dos
+	echo $?
+> expected output:
+	13
