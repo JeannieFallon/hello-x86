@@ -1,0 +1,13 @@
+
+
+> tres.asm demonstrates jump instructions, creating conditions, and iteration
+  - EIP: instruction pointer, holds location of execution, changed by jump operations (not add/sub operations like a register)
+  - create label by ending identifier with a colon
+    ex) skip:
+> run commands:
+  nasm -f elf32 tres.asm -o tres.o
+  ld -m elf_i386 tres.o -o tres
+  ./tres
+  echo $?
+> expected output:
+  42
