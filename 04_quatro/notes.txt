@@ -6,7 +6,6 @@
   nasm -f elf32 quatro.asm -o quatro.o
   ld -m elf_i386 quatro.o -o quatro
   ./quatro
-  echo $?
 > expected outputs:
   quatro_static     yellow
   quatro_dynamic    Hello!

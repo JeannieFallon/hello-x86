@@ -9,7 +9,7 @@ _start:
   mov eax, 4                       ; 4 is sys_write system call
   mov ebx, 1                       ; 1 is file descriptor for stdout
   mov ecx, msg                     ; bytes to write
-  mov edx, len                     ; number of byes to write
+  mov edx, len                     ; number of bytes to write
   int 0x80                         ; perform syscall
   mov eax, 1                       ; 1 is sys_exit system call
   mov ebx, 0                       ; exit status is 0 (success)
