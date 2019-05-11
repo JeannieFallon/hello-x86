@@ -1,15 +1,26 @@
-
-
 > tres files demonstrate jump instructions, creating conditions, and iteration
   - tres_jump.asm demonstrates an unconditional jump
   - tres_less.asm demonstrates a conditional jump using a less-then comparison
   - EIP: instruction pointer, holds location of execution, changed by jump operations (not add/sub operations like a register)
   - create label by ending identifier with a colon
     ex) skip:
-> run commands:
+  - jumps used after a comparison
+    je  A, B  ; jump if equal
+    jne A, B  ; jump if NOT equal
+    jg  A, B  ; jump if A greater than B
+    jge A, B  ; jump if A greater than or equal to B
+    jl  A, B  ; jump if A less than B
+    jle A, B  ; jump if A less than or equal to B
+  - increment/decrement commands
+    inc ++
+    dec --
+
+> run commands (change file name for each example):
   nasm -f elf32 tres.asm -o tres.o
   ld -m elf_i386 tres.o -o tres
   ./tres
   echo $?
-> expected output:
-  42
+> expected outputs:
+  tres_jump   42
+  tres_less   42
+  tres_loop   11
