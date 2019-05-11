@@ -2,16 +2,11 @@
   - quatro_static.asm demonstrates the output of a static, unchanged string
   - quatro_dynamic.asm demonstrates the output of a dynamic, updated string
 
-
-
-
-
 > run commands (change file name for each example):
-  nasm -f elf32 tres.asm -o tres.o
-  ld -m elf_i386 tres.o -o tres
-  ./tres
+  nasm -f elf32 quatro.asm -o quatro.o
+  ld -m elf_i386 quatro.o -o quatro
+  ./quatro
   echo $?
 > expected outputs:
-  tres_jump   42
-  tres_less   42
-  tres_loop   11
+  quatro_static     yellow
+  quatro_dynamic    Hello!
