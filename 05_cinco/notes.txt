@@ -30,3 +30,4 @@
   ld -m elf_i386 cinco.o -o cinco
   ./cinco
 > expected outputs:
+  Hey!
