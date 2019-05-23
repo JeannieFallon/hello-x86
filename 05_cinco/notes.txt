@@ -1,0 +1,8 @@
+> cinco files demonstrate stack operations
+  //TODO
+
+> run commands:
+  nasm -f elf32 cinco.asm -o cinco.o
+  ld -m elf_i386 cinco.o -o cinco
+  ./cinco
+> expected outputs:
