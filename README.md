@@ -1,6 +1,6 @@
 # hello-x86
 
-An introductory exploration of instruction set architecture using code samples written in x86 assembly language.
+An introductory exploration of instruction set architecture using code samples written in x86 assembly language (currently 32-bit only).
 
 **Source tutorial**
 
