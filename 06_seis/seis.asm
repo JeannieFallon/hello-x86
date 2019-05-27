@@ -8,6 +8,6 @@ _start:
 
 func:             ; define label "func"
   mov ebx, 42     ; move 42 into ebx
-  ; pop into eax the return location that call op pushed onto stack
-  pop eax
+  ; pop the previously pushed location & into eax
+  pop eax         ; pop off of top of stack
   jmp eax         ; jump back to that location
