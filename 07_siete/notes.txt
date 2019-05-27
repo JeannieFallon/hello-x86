@@ -1,0 +1,9 @@
+> siete covers using ebp register to store stack pointer esp, and prologue + epilogue ebp/esp structure needed for nested function calls
+
+
+> run commands:
+  nasm -f elf32 siete.asm -o siete.o
+  ld -m elf_i386 siete.o -o siete
+  ./siete
+  echo $?
+> expected outputs:
