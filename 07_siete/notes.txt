@@ -1,6 +1,8 @@
 > siete covers using ebp register to store stack pointer esp, and prologue + epilogue ebp/esp structure needed for nested function calls
   - ebp: base pointer register, can be used to hold value of esp
     * once original location of esp is stored in ebp, can allocate spaces on stack to execute a function and preserve original line of execution
+  - prologue:
+  - epilogue:
 
 
 > run commands:
