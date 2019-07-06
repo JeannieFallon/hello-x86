@@ -1,0 +1,33 @@
+> five files demonstrate stack operations
+  - data types
+    db: 1 byte
+      name1 db "string"     ; byte string
+      name2 db 0xff         ; byte literal
+      name3 db 100          ; decimal literal
+    dw: 2 bytes
+      name4 dw 1000
+    dd: 4 bytes
+      name5 dd 100000
+  - stack: LIFO array, stack pointer is a register, random access; stack pointer starts at highest point, moves down with push and up with pop
+      > for 32-bit
+          - esp is register that holds the location of top of stack
+          - push/pop by 4-byte increments (32 bits is 8 * 4 bytes)
+  - stack operations: push or sub/mov, pop or mov/add
+      > push
+        push 1234    ; decrease stack pointer by 4 & write val 
+      > sub from esp, and then mov into esp location
+        sub esp, 4            ; subtract 4 from stack pointer (esp)
+        mov [esp], dword 357  ; move 357 into esp's new location
+          - dword specifies the size of data being moved (4 bytes)
+      > pop
+        pop eax      ; move value from top of stack into eax register
+      > mov bytes into eax, and then add to esp
+        mov eax, dword [esp]  ; move bytes from top of stack into eax
+        add esp, 4            ; add 4 to stack pointer (esp)
+
+> run commands:
+  nasm -f elf32 five.asm -o five.o
+  ld -m elf_i386 five.o -o five
+  ./five
+> expected outputs:
+  Hey!
