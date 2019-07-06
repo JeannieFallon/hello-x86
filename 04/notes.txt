@@ -1,0 +1,11 @@
+> four files demonstrate memory access
+  - four_static.asm demonstrates the output of a static, unchanged string
+  - four_dynamic.asm demonstrates the output of a dynamic, updated string
+
+> run commands (change file name for each example):
+  nasm -f elf32 four.asm -o four.o
+  ld -m elf_i386 four.o -o four
+  ./four
+> expected outputs:
+  four_static     yellow
+  four_dynamic    Hello!
