@@ -1,4 +1,4 @@
-> siete covers using ebp register to store stack pointer esp, and prologue + epilogue ebp/esp structure needed for nested function calls
+> seven covers using ebp register to store stack pointer esp, and prologue + epilogue ebp/esp structure needed for nested function calls
   - ebp: base pointer register, can be used to hold value of esp
     * once original location of esp is stored in ebp, can allocate spaces on stack to execute a function and preserve original line of execution
   - prologue:
@@ -6,9 +6,9 @@
 
 
 > run commands:
-  nasm -f elf32 siete.asm -o siete.o
-  ld -m elf_i386 siete.o -o siete
-  ./siete
+  nasm -f elf32 seven.asm -o seven.o
+  ld -m elf_i386 seven.o -o seven
+  ./seven
   echo $?
 > expected outputs:
-  siete_basic.asm       Hi 
+  seven_basic.asm       Hi 
